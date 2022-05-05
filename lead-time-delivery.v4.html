@@ -1,0 +1,1937 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Avon Lead Time Delivery</title>
+</head>
+
+<style>
+	#GetLuzon 
+	{
+		background-image: url('https://www.avon.com.ph/REPSuite/static/images/basic/searchicon.png');
+		background-position: 10px 10px;
+		background-repeat: no-repeat;
+		width: 100%;
+		font-size: 16px;
+		padding: 12px 20px 12px 40px;
+		border: 2px solid #ddd;
+		margin-bottom: 12px;
+		font-family: 'Montserrat', serif; 
+		color: #546264; 
+		font-weight: 500; 
+		font-size: 12px; 
+		line-height: 20px;
+	};
+	
+	input[type="text"] 
+	{
+    width: 200px;
+	};
+	
+</style>
+
+<style>
+	#GetVisayas 
+	{
+		background-image: url('https://www.avon.com.ph/REPSuite/static/images/basic/searchicon.png');
+		background-position: 10px 10px;
+		background-repeat: no-repeat;
+		width: 100%;
+		font-size: 16px;
+		padding: 12px 20px 12px 40px;
+		border: 2px solid #ddd;
+		margin-bottom: 12px;
+		font-family: 'Montserrat', serif; 
+		color: #546264; 
+		font-weight: 500; 
+		font-size: 12px; 
+		line-height: 20px;
+	};
+	
+	input[type="text"] 
+	{
+    width: 200px;
+	};
+	
+</style>
+
+	
+<style>
+	#GetMindanao 
+	{
+		background-image: url('https://www.avon.com.ph/REPSuite/static/images/basic/searchicon.png');
+		background-position: 10px 10px;
+		background-repeat: no-repeat;
+		width: 100%;
+		font-size: 16px;
+		padding: 12px 20px 12px 40px;
+		border: 2px solid #ddd;
+		margin-bottom: 12px;
+		font-family: 'Montserrat', serif; 
+		color: #546264; 
+		font-weight: 500; 
+		font-size: 12px; 
+		line-height: 20px;
+	};
+	
+	input[type="text"] 
+	{
+    width: 200px;
+	};
+	
+</style>
+
+<style>
+	* {box-sizing: border-box}
+	
+	.my-accordion .menu {
+		background-color:#d5d5d5;
+		color:#444;
+		cursor:pointer;
+		padding:12px;
+		width:100%;
+		text-align:center;
+		border:none;
+		outline:none;
+		margin-top:4px;
+		border-radius:8px;
+		font-size:inherit;
+		font-family: Montserrat;
+	}
+	
+	.my-accordion .panel {
+		background-color:#FFFFFF;
+		color:#000000;
+		overflow:hidden;
+	}
+	
+	.my-accordion .open {
+		display:block;
+	}
+	
+	.my-accordion .close {
+		display:none;
+	}
+	
+	.my-accordion .active {
+		background-color:#1b90bb;
+		background-image: linear-gradient(to right, #5B2482 , #ED145B);
+		color:#fff;
+	}
+	
+	.my-accordion .arrow {
+		float:left;
+		display:block;
+	}
+	
+	.my-accordion .darrow {
+		display:none;
+	}
+	
+	.my-accordion .active .darrow {
+		display:block;
+	}
+	
+	.my-accordion .active .rarrow {
+		display:none;
+	}
+	
+	.my-accordion .panel a {
+		display:block;
+		background:#808080;
+		color:#FFFFFF;
+		padding:5px;
+		margin:3px;
+		width:100%;
+		text-decoration:none;
+		font-family: Montserrat;
+	}
+	
+	.my-tabcontent {
+		padding: 10px;
+		font-family: Montserrat;
+		font-size: 11pt;
+	}
+	
+	.tabcontent-container {
+	  height: 100%;
+	  margin: 0;
+	  font-family: Montserrat;
+	}
+
+	/* XDE CSS*/
+	
+	
+	
+	.lbc-col-4, .xde-col-4 {
+	    -webkit-box-flex: 0;
+	    -ms-flex: 0 0 33.333333%;
+	    flex: 0 0 33.333333%;
+	    max-width: 33.333333%;
+
+		position: relative;
+		width: 100%;
+		min-height: 1px;
+		padding-right: 15px;
+		padding-left: 15px;
+	}
+
+	.lbc-row, .xde-row {
+	    display: -webkit-box;
+	    display: -ms-flexbox;
+	    display: flex;
+	    -ms-flex-wrap: wrap;
+	    flex-wrap: wrap;
+	     margin-right: -15px;
+	    margin-left: -15px; 
+	}
+
+
+	@media (min-width: 612px) {
+		.lbc-col-md-4, .xde-col-md-4 {
+	        -webkit-box-flex: 0;
+	        -ms-flex: 0 0 33.333333%;
+	        flex: 0 0 33.333333%;
+	        max-width: 33.333333%;
+	    }
+    }
+
+    .lbc-row img, .xde-row img, .delivery-img-header {
+	    max-width: 100%;
+	    height: auto
+    }
+
+    .lbc-row ul, .xde-row ul {
+    	list-style: none;
+    }
+
+
+    .lbc-row ul ul, .xde-row ul ul {
+		margin-left: 40px;
+    }
+
+    .delivery-hidden {
+    	display: none;
+    }
+
+    .lbc-row button, .xde-row button {
+		width: 90%;
+		margin: 0 auto;
+		display: block;
+	}
+
+
+
+.xde-row .xde-servicable-link {
+    text-align: center;
+    display: block;
+    width: 100%;
+    font-size: 20pt;
+    font-weight: bold;
+    color: #fff;
+    background: #622c80;
+    padding: 10px;
+}
+
+.xde-servicable-link a {
+    font-size: 20pt;
+    font-weight: bold;
+    color: #d4316a;
+    filter: drop-shadow(2px 4px 6px black);
+}
+
+</style>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>	
+<script>
+// Search for Luzon
+$(document).ready(function() {
+	$("#GetLuzon").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#GetLuzonList tr").filter(function() {
+			$(this).toggle($(this).text()
+			.toLowerCase().indexOf(value) > -1)
+		});
+	});
+});
+
+// Search for Visayas
+$(document).ready(function() {
+	$("#GetVisayas").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#GetVisayasList tr").filter(function() {
+			$(this).toggle($(this).text()
+			.toLowerCase().indexOf(value) > -1)
+		});
+	});
+});	
+	
+// Search for Mindanao
+$(document).ready(function() {
+	$("#GetMindanao").on("keyup", function() {
+		var value = $(this).val().toLowerCase();
+		$("#GetMindanaoList tr").filter(function() {
+			$(this).toggle($(this).text()
+			.toLowerCase().indexOf(value) > -1)
+		});
+	});
+});
+
+
+</script>	
+	
+<div class="tabcontent-container">
+	
+	<img class="delivery-img-header" src="https://www.avon.com.ph/REPSuite/static/images/delivery_sla/DeliveryLeadTime.jpg"  alt="Delivery Lead Time" />
+	<br/>
+
+	<img class="delivery-img-header" src="https://www.avon.com.ph/REPSuite/static/images/delivery_sla/WeDeliverTitle.jpg" width="100%" alt="We Deliver to:" />
+	<br>
+
+
+<!-- Delivery Lead Time -->
+	<center><h3>To know more about the <b>lead time delivery</b> in your area click the <b>&quot;+&quot;</b>.</h3></center>
+	<div class="my-accordion">
+		<button class="menu"><b>Luzon</b><span class="arrow rarrow"><b>+</b></span><span class="arrow darrow"><b>-</b></span></button>
+		<div class="panel close">
+			<div class="my-tabcontent" >
+				<input id="GetLuzon" type="text" placeholder="Key-in what your looking for:">	
+
+				<table cellspacing="0" cellpadding="7" border="1" width="100%" style="font-size: 12px;">
+				  <tr>
+					<td width="60%"><center><b>STORE NAME</b></center></td>
+					<td width="40%"><center><b>LEAD TIME</b></center></td>
+				  </tr>
+				<tbody id="GetLuzonList"  align="center">
+				  <tr>
+					<td>AGOO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>ALABANG</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>ALAMINOS</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>ANGELES</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>ANTIPOLO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>APALIT</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>APARRI</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>ARAYAT</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BACLARAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BAESA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BAGUIO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BALAYAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BALER</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BALIUAG</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BAMBANG</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BATAAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BATANGAS</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BAUAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BICUTAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BINAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BINANGONAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>CABANATUAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>CAINTA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>CALAMBA-CROSSING</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>CALAPAN</td>
+					<td>5-7 Days</td>
+				  </tr>
+				  <tr>
+					<td>CALAUAG</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>CALOOCAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>CANDELARIA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>CANDON</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>CAUAYAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>COMMONWEALTH</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>CONCEPCION</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>CUBAO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>DAET</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>DAGUPAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>DASMARINAS</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>DINALUPIHAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>EDSA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>ESPANA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>FAIRVIEW</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>GAPAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>GENERAL LUIS</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>GOA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>GUADALUPE</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>GUIMBA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>GUMACA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>IBA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>ILAGAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>IMUS</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>IRIGA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LA TRINIDAD</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LA UNION</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LAOAG</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LAS PINAS</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LEGASPI</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LEMERY</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LIGAO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LIMAY</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LINGAYEN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LIPA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LOS BANOS</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LUCENA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>MABALACAT</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>MALABON</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>MALOLOS</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>MANGATAREM</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>MARIKINA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>MASBATE</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>MEYCAUAYAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>MOLINO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>MONTALBAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>NAGA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>NASUGBU</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>NOVALICHES</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>OLONGAPO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>PALAWAN</td>
+					<td>5-7 Days</td>
+				  </tr>
+				  <tr>
+					<td>PANIQUI</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>PASIG</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>PATEROS</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>PINAMALAYAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>ROMBLON</td>
+					<td>5-7 Days</td>
+				  </tr>
+				  <tr>
+					<td>ROSALES</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>ROSARIO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>ROXAS_AX</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SAMPALOC</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SAN CARLOS AX</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SAN FERNANDO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SAN FRANCISCO    DM</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SAN JOSE MDO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SAN JOSE NE</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SAN MATEO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SAN PABLO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SANCHEZ MIRA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SANTIAGO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SHAW</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SILANG</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SINILOAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SIPOCOT</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SJ DEL MONTE</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SOLANO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SORSOGON</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>STA. ANA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>STA. CRUZ</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>STA. MARIA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SUCAT</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TABACO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TAFT</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TALAVERA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TANAUAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TANAY</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TARLAC</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TAYTAY</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TAYUG</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TONDO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TRECE MARTIRES</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TUGUEGARAO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>URDANETA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>VALENZUELA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>VIGAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>VIRAC</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>ZABARTE</td>
+					<td>1-3 Days</td>
+				  </tr>
+					</tbody>
+				</table>				
+			</div>
+		</div>
+
+		<button class="menu"><b>Visayas</b><span class="arrow rarrow"><b>+</b></span><span class="arrow darrow"><b>-</b></span></button>
+		<div class="panel close">
+			<div class="my-tabcontent" >
+				&nbsp;<input id="GetVisayas" type="text" placeholder="Key-in what your looking for:">
+
+				<table cellspacing="0" cellpadding="7" border="1" width="100%" style="font-size: 12px;">
+				  <tr>
+					<td width="60%"><center><b>STORE NAME</b></center></td>
+					<td width="40%"><center><b>LEAD TIME</b></center></td>
+				  </tr>
+				<tbody id="GetVisayasList"  align="center">
+				  <tr>
+					<td>ANTIQUE</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BAYAWAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BOGO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>CADIZ</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>CARCAR</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>DANAO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>KABANKALAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>LA CARLOTA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>OTON</td>
+					<td>1-3 Days</td>
+				  </tr>
+
+				  <tr>
+					<td>PASSI</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SAN CARLOS NOC</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SARA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SILAY</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>SIQUIJOR</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TALIBON</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>TOLEDO</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BACOLOD</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>BAIS</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>BORONGAN</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>CALBAYOG</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>CATARMAN</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>CATBALOGAN</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>CEBU</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>CONSOLACION</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>DUMAGUETE</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>ILOILO</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>JARO</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>KALIBO</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>LAPULAPU</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>MAASIN</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>MANDAUE</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>NAVAL</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>ORMOC</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>ROXAS CAP</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>SOGOD</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>TACLOBAN</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>TAGBILARAN</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>TALISAY</td>
+					<td>1-5 Days</td>
+				  </tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+		<button class="menu"><b>Mindanao</b><span class="arrow rarrow"><b>+</b></span><span class="arrow darrow"><b>-</b></span></button>
+		<div class="panel close">
+			<div class="my-tabcontent" >
+				&nbsp;<input id="GetMindanao" type="text" placeholder="Key-in what your looking for:">		
+
+				<table cellspacing="0" cellpadding="7" border="1" width="100%" style="font-size: 12px;">
+				  <tr>
+					<td width="60%"><center><b>STORE NAME</b></center></td>
+					<td width="40%"><center><b>LEAD TIME</b></center></td>
+				  </tr>
+				<tbody id="GetMindanaoList"  align="center">
+				  <tr>
+					<td>BAYUGAN</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>MALAYBALAY</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>VALENCIA</td>
+					<td>1-3 Days</td>
+				  </tr>
+				  <tr>
+					<td>BISLIG</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>BUTUAN</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>CAGAYAN DE ORO</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>COTABATO</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>DAVAO</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>DIGOS</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>DIPOLOG</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>GEN.SAN</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>GINGOOG</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>ILIGAN</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>IPIL</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>KIDAPAWAN</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>MARANDING</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>MARBEL</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>MATI</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>MIDSAYAP</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>MINTAL</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>NABUNTURAN</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>OZAMIZ</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>PAGADIAN</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>PANABO</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>SAN FRANCISCO </td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>SURIGAO</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>TACURONG</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>TAGUM</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>TANDAG</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>TORIL</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>VILLANUEVA</td>
+					<td>1-5 Days</td>
+				  </tr>
+				  <tr>
+					<td>ZAMBOANGA</td>
+					<td>1-5 Days</td>
+				  </tr>
+				</tbody>
+				</table>
+			</div>
+		</div>
+	</div>
+	
+	
+<br>
+<br>
+<!-- XDE -->
+<img src="https://www.avon.com.ph/REPSuite/static/images/delivery_sla/XDE_Banner.jpg" width="100%" alt="XDE Banner Lead Time" />
+
+<div class="xde-row">
+
+	<div class="xde-col-md-4">
+
+		<img src="https://www.avon.com.ph/REPSuite/static/images/delivery_sla/5days.png" alt="5 Days Lead Time" />
+
+		<ul>
+			<li><button onclick="buttonProvince_a1();">Lazada Office</button></li>
+			<ul id="province-a1" class="delivery-hidden">
+				<li>Taguig</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a2();">Metro Manila~Caloocan</button></li>
+			<ul id="province-a2" class="delivery-hidden">
+				<li>Caloocan City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a3();">Metro Manila~Las Pinas</button></li>
+			<ul id="province-a3" class="delivery-hidden">
+				<li>Las Pinas City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a4();">Metro Manila~Makati</button></li>
+			<ul id="province-a4" class="delivery-hidden">
+				<li>Makati City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a5();">Metro Manila~Malabon</button></li>
+			<ul id="province-a5" class="delivery-hidden">
+				<li>Malabon City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a6();">Metro Manila~Mandaluyong</button></li>
+			<ul id="province-a6" class="delivery-hidden">
+				<li>Mandaluyong City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a7();">Metro Manila~Manila</button></li>
+			<ul id="province-a7" class="delivery-hidden">
+				<li>Binondo</li>
+				<li>Ermita</li>
+				<li>Intramuros</li>
+				<li>Malate</li>
+				<li>Paco</li>
+				<li>Pandacan</li>
+				<li>Port Area</li>
+				<li>Quiapo</li>
+				<li>Sampaloc</li>
+				<li>San Miguel</li>
+				<li>San Nicolas</li>
+				<li>Santa Ana</li>
+				<li>Santa Cruz</li>
+				<li>Santa Mesa</li>
+				<li>Tondo I / Ii</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a8();">Metro Manila~Marikina</button></li>
+			<ul id="province-a8" class="delivery-hidden">
+				<li>Marikina City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a9();">Metro Manila~Muntinlupa</button></li>
+			<ul id="province-a9" class="delivery-hidden">
+				<li>Muntinlupa City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a10();">Metro Manila~Navotas</button></li>
+			<ul id="province-a10" class="delivery-hidden">
+				<li>Navotas City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a11();">Metro Manila~Paranaque</button></li>
+			<ul id="province-a11" class="delivery-hidden">
+				<li>Paranaque City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a12();">Metro Manila~Pasay</button></li>
+			<ul id="province-a12" class="delivery-hidden">
+				<li>Pasay City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a13();">Metro Manila~Pasig</button></li>
+			<ul id="province-a13" class="delivery-hidden">
+				<li>Pasig City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a14();">Metro Manila~Pateros</button></li>
+			<ul id="province-a14" class="delivery-hidden">
+				<li>Pateros</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a15();">Metro Manila~Quezon City</button></li>
+			<ul id="province-a15" class="delivery-hidden">
+				<li>Quezon City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a16();">Metro Manila~San Juan</button></li>
+			<ul id="province-a16" class="delivery-hidden">
+				<li>San Juan City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a17();">Metro Manila~Taguig</button></li>
+			<ul id="province-a17" class="delivery-hidden">
+				<li>Taguig City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a18();">Metro Manila~Valenzuela</button></li>
+			<ul id="province-a18" class="delivery-hidden">
+				<li>Valenzuela City</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a19();">Rizal</button></li>
+			<ul id="province-a19" class="delivery-hidden">
+				<li>Angono</li>
+				<li>Antipolo</li>
+				<li>Baras</li>
+				<li>Binangonan</li>
+				<li>Cainta</li>
+				<li>Cardona</li>
+				<li>Jala-Jala</li>
+				<li>Morong</li>
+				<li>Pililla</li>
+				<li>Rodriguez (Montalban)</li>
+				<li>San Mateo</li>
+				<li>Tanay</li>
+				<li>Taytay</li>
+				<li>Teresa</li>
+			</ul>
+		</ul>
+	</div>
+
+
+	<div class="xde-col-md-4">
+
+		<img src="https://www.avon.com.ph/REPSuite/static/images/delivery_sla/7days.png" alt="7 Days Lead Time" />
+
+		<ul>
+			<li><button onclick="buttonProvince_a20();">Albay</button></li>
+			<ul id="province-a20" class="delivery-hidden">
+				<li>Camalig</li>
+				<li>Daraga</li>
+				<li>Legazpi</li>
+				<li>Malilipot</li>
+				<li>Santo Domingo</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a21();">Bataan</button></li>
+			<ul id="province-a21" class="delivery-hidden">
+				<li>Abucay</li>
+				<li>Balanga</li>
+				<li>Limay</li>
+				<li>Orani</li>
+				<li>Orion</li>
+				<li>Samal</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a22();">Batangas</button></li>
+			<ul id="province-a22" class="delivery-hidden">
+				<li>Agoncillo</li>
+				<li>Alitagtag</li>
+				<li>Balayan</li>
+				<li>Batangas City</li>
+				<li>Bauan</li>
+				<li>Calaca</li>
+				<li>Calatagan</li>
+				<li>Cuenca</li>
+				<li>Ibaan</li>
+				<li>Laurel</li>
+				<li>Lemery</li>
+				<li>Lian</li>
+				<li>Lipa</li>
+				<li>Lobo</li>
+				<li>Mabini</li>
+				<li>Malvar</li>
+				<li>Mataasnakahoy</li>
+				<li>Nasugbu</li>
+				<li>Padre Garcia</li>
+				<li>San Nicolas</li>
+				<li>San Pascual</li>
+				<li>Santa Teresita</li>
+				<li>Santo Tomas</li>
+				<li>Taal</li>
+				<li>Talisay</li>
+				<li>Tanauan</li>
+				<li>Taysan</li>
+				<li>Tuy</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a23();">Benguet</button></li>
+			<ul id="province-a23" class="delivery-hidden">
+				<li>Baguio</li>
+				<li>Itogon</li>
+				<li>La Trinidad</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a24();">Bulacan</button></li>
+			<ul id="province-a24" class="delivery-hidden">
+				<li>Angat</li>
+				<li>Balagtas (Bigaa)</li>
+				<li>Baliuag</li>
+				<li>Bocaue</li>
+				<li>Bulacan</li>
+				<li>Bustos</li>
+				<li>Calumpit</li>
+				<li>Dona Remedios Trinidad</li>
+				<li>Guiguinto</li>
+				<li>Hagonoy</li>
+				<li>Malolos</li>
+				<li>Marilao</li>
+				<li>Meycauayan</li>
+				<li>Norzagaray</li>
+				<li>Obando</li>
+				<li>Pandi</li>
+				<li>Paombong</li>
+				<li>Plaridel</li>
+				<li>Pulilan</li>
+				<li>San Ildefonso</li>
+				<li>San Jose Del Monte</li>
+				<li>San Miguel</li>
+				<li>San Rafael</li>
+				<li>Santa Maria</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a25();">Cagayan</button></li>
+			<ul id="province-a25" class="delivery-hidden">
+				<li>Santa Teresita</li>
+				<li>Tuguegarao</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a26();">Camarines Sur</button></li>
+			<ul id="province-a26" class="delivery-hidden">
+				<li>Bombon</li>
+				<li>Calabanga</li>
+				<li>Camaligan</li>
+				<li>Canaman</li>
+				<li>Gainza</li>
+				<li>Magarao</li>
+				<li>Milaor</li>
+				<li>Naga</li>
+				<li>Pili</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a27();">Cavite</button></li>
+			<ul id="province-a27" class="delivery-hidden">
+				<li>Alfonso</li>
+				<li>Amadeo</li>
+				<li>Bacoor</li>
+				<li>Carmona</li>
+				<li>Cavite City</li>
+				<li>Dasmarinas</li>
+				<li>Gen. Mariano Alvarez</li>
+				<li>General Emilio Aguinaldo</li>
+				<li>General Trias</li>
+				<li>Imus</li>
+				<li>Indang</li>
+				<li>Kawit</li>
+				<li>Maragondon</li>
+				<li>Mendez-Nunez</li>
+				<li>Naic</li>
+				<li>Noveleta</li>
+				<li>Silang</li>
+				<li>Tagaytay</li>
+				<li>Tanza</li>
+				<li>Ternate</li>
+				<li>Trece Martires</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a28();">Ilocos Norte</button></li>
+			<ul id="province-a28" class="delivery-hidden">
+				<li>Bacarra</li>
+				<li>Batac</li>
+				<li>Currimao</li>
+				<li>Laoag</li>
+				<li>Paoay</li>
+				<li>San Nicolas</li>
+				<li>Sarrat</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a29();">Ilocos Sur</button></li>
+			<ul id="province-a29" class="delivery-hidden">
+
+				<li>Caoayan</li>
+				<li>Magsingal</li>
+				<li>San Ildefonso</li>
+				<li>Santa</li>
+				<li>Santa Catalina</li>
+				<li>Santa Maria</li>
+				<li>Vigan</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a30();">Isabela</button></li>
+			<ul id="province-a30" class="delivery-hidden">
+				<li>Aurora</li>
+				<li>Cauayan</li>
+				<li>Ilagan</li>
+				<li>Luna</li>
+				<li>Naguilian</li>
+				<li>Reina Mercedes</li>
+				<li>Roxas</li>
+				<li>Santiago</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a31();">La Union</button></li>
+			<ul id="province-a31" class="delivery-hidden">
+				<li>Bacnotan</li>
+				<li>Bauang</li>
+				<li>Luna</li>
+				<li>Naguilian</li>
+				<li>San Fernando</li>
+				<li>San Juan</li>
+				<li>Santo Tomas</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a32();">Laguna</button></li>
+			<ul id="province-a32" class="delivery-hidden">
+				<li>Alaminos</li>
+				<li>Bay</li>
+				<li>Binan</li>
+				<li>Cabuyao</li>
+				<li>Calamba</li>
+				<li>Calauan</li>
+				<li>Cavinti</li>
+				<li>Famy</li>
+				<li>Kalayaan</li>
+				<li>Liliw</li>
+				<li>Los Banos</li>
+				<li>Luisiana</li>
+				<li>Lumban</li>
+				<li>Mabitac</li>
+				<li>Magdalena</li>
+				<li>Majayjay</li>
+				<li>Nagcarlan</li>
+				<li>Paete</li>
+				<li>Pagsanjan</li>
+				<li>Pakil</li>
+				<li>Pangil</li>
+				<li>Pila</li>
+				<li>San Pablo</li>
+				<li>San Pedro</li>
+				<li>Santa Maria</li>
+				<li>Santa Rosa</li>
+				<li>Siniloan</li>
+				<li>Victoria</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a33();">Lazada Office</button></li>
+			<ul id="province-a33" class="delivery-hidden">
+				<li>Laguna</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a34();">Nueva Ecija</button></li>
+			<ul id="province-a34" class="delivery-hidden">
+				<li>Aliaga</li>
+				<li>Cabanatuan</li>
+				<li>Cabiao</li>
+				<li>Gapan</li>
+				<li>General Tinio (Papaya)</li>
+				<li>Jaen</li>
+				<li>Laur</li>
+				<li>Licab</li>
+				<li>Penaranda</li>
+				<li>San Jose</li>
+				<li>San Leonardo</li>
+				<li>Santa Rosa</li>
+				<li>Science City Of Munoz</li>
+				<li>Talavera</li>
+				<li>Zaragoza</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a35();">Oriental Mindoro</button></li>
+			<ul id="province-a35" class="delivery-hidden">
+				<li>Calapan</li>
+				<li>Puerto Galera</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a36();">Pampanga</button></li>
+			<ul id="province-a36" class="delivery-hidden">
+				<li>Angeles</li>
+				<li>Apalit</li>
+				<li>Arayat</li>
+				<li>Bacolor</li>
+				<li>Candaba</li>
+				<li>Floridablanca</li>
+				<li>Guagua</li>
+				<li>Lubao</li>
+				<li>Mabalacat</li>
+				<li>Macabebe</li>
+				<li>Magalang</li>
+				<li>Masantol</li>
+				<li>Mexico</li>
+				<li>Minalin</li>
+				<li>Porac</li>
+				<li>San Fernando</li>
+				<li>San Luis</li>
+				<li>San Simon</li>
+				<li>Santa Ana</li>
+				<li>Santa Rita</li>
+				<li>Santo Tomas</li>
+				<li>Sasmuan</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a37();">Pangasinan</button></li>
+			<ul id="province-a37" class="delivery-hidden">
+				<li>Basista</li>
+				<li>Binmaley</li>
+				<li>Bugallon</li>
+				<li>Calasiao</li>
+				<li>Dagupan</li>
+				<li>Labrador</li>
+				<li>Laoac</li>
+				<li>Lingayen</li>
+				<li>Malasiqui</li>
+				<li>Manaoag</li>
+				<li>Mangaldan</li>
+				<li>Mapandan</li>
+				<li>Pozorrubio</li>
+				<li>San Fabian</li>
+				<li>Urbiztondo</li>
+				<li>Urdaneta</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a38();">Tarlac</button></li>
+			<ul id="province-a38" class="delivery-hidden">
+				<li>Anao</li>
+				<li>Bamban</li>
+				<li>Camiling</li>
+				<li>Capas</li>
+				<li>Concepcion</li>
+				<li>Gerona</li>
+				<li>La Paz</li>
+				<li>Mayantoc</li>
+				<li>Moncada</li>
+				<li>Paniqui</li>
+				<li>Pura</li>
+				<li>Ramos</li>
+				<li>San Clemente</li>
+				<li>San Jose</li>
+				<li>San Manuel</li>
+				<li>Santa Ignacia</li>
+				<li>Tarlac City</li>
+				<li>Victoria</li>
+			</ul>
+		</ul>
+	</div>
+
+
+
+
+
+
+	<div class="xde-col-md-4">
+
+		<img src="https://www.avon.com.ph/REPSuite/static/images/delivery_sla/9days.png" alt="9 Days Lead Time" />
+
+		<ul>
+			<li><button onclick="buttonProvince_a39();">Cebu</button></li>
+			<ul id="province-a39" class="delivery-hidden">
+				<li>Cebu</li>
+				<li>Compostela</li>
+				<li>Consolacion</li>
+				<li>Lapu-Lapu</li>
+				<li>Liloan</li>
+				<li>Mandaue</li>
+				<li>Minglanilla</li>
+				<li>Talisay</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a40();">Davao Del Sur</button></li>
+			<ul id="province-a40" class="delivery-hidden">
+				<li>Davao</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a41();">Iloilo</button></li>
+			<ul id="province-a41" class="delivery-hidden">
+				<li>Dumangas</li>
+				<li>Iloilo City</li>
+				<li>Leganes</li>
+				<li>New Lucena</li>
+				<li>Oton</li>
+				<li>Pavia</li>
+				<li>Pototan</li>
+				<li>San Miguel</li>
+				<li>Santa Barbara</li>
+				<li>Zarraga</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a42();">Leyte</button></li>
+			<ul id="province-a42" class="delivery-hidden">
+				<li>Babatngon</li>
+				<li>Palo</li>
+				<li>Tacloban</li>
+				<li>Tanauan</li>
+			</ul>
+
+
+			<li><button onclick="buttonProvince_a43();">Misamis Oriental</button></li>
+			<ul id="province-a43" class="delivery-hidden">
+				<li>Cagayan De Oro</li>
+				<li>El Salvador</li>
+				<li>Opol</li>
+				<li>Tagoloan</li>
+				<li>Villanueva</li>
+			</ul>
+		</ul>
+	</div>	
+</div>
+<br>
+<br>
+	<div class="xde-row">
+		<span class="xde-servicable-link">Go <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vQ3MbZngIQfCHuWO2ZvRfATReFI4Mtj-tWEzCHgouHfTRsjl5umQb9g0ExSr2UCdfuIom3fM7_dfqKQ/pubhtml?gid=1005658422&amp;single=true&amp;widget=true&amp;headers=false" target="_blank">here</a> if you want to know if your area is servicable by XDE.</span>
+	</div>
+</div>
+
+<script>
+!function(){for(var l=document.querySelectorAll(".my-accordion .menu"),e=0;e<l.length;e++)l[e].addEventListener("click",n);function n(){for(var e=document.querySelectorAll(".my-accordion .panel"),n=0;n<e.length;n++)e[n].className="panel close";if(-1==this.className.indexOf("active")){for(n=0;n<l.length;n++)l[n].className="menu";this.className="menu active",this.nextElementSibling.className="panel open"}else for(n=0;n<l.length;n++)l[n].className="menu"}}();
+</script>	
+	
+<script>
+	
+	/* XDE */
+
+	
+	function buttonProvince_a1() {
+		var province_a1 = document.getElementById("province-a1");
+		province_a1.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a2() {
+		var province_a2 = document.getElementById("province-a2");
+		province_a2.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a3() {
+		var province_a3 = document.getElementById("province-a3");
+		province_a3.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a4() {
+		var province_a4 = document.getElementById("province-a4");
+		province_a4.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a5() {
+		var province_a5 = document.getElementById("province-a5");
+		province_a5.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a6() {
+		var province_a6 = document.getElementById("province-a6");
+		province_a6.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a7() {
+		var province_a7 = document.getElementById("province-a7");
+		province_a7.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a8() {
+		var province_a8 = document.getElementById("province-a8");
+		province_a8.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a9() {
+		var province_a9 = document.getElementById("province-a9");
+		province_a9.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a10() {
+		var province_a10 = document.getElementById("province-a10");
+		province_a10.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a11() {
+		var province_a11 = document.getElementById("province-a11");
+		province_a11.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a12() {
+		var province_a12 = document.getElementById("province-a12");
+		province_a12.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a13() {
+		var province_a13 = document.getElementById("province-a13");
+		province_a13.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a14() {
+		var province_a14 = document.getElementById("province-a14");
+		province_a14.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a15() {
+		var province_a15 = document.getElementById("province-a15");
+		province_a15.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a16() {
+		var province_a16 = document.getElementById("province-a16");
+		province_a16.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a17() {
+		var province_a17 = document.getElementById("province-a17");
+		province_a17.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a18() {
+		var province_a18 = document.getElementById("province-a18");
+		province_a18.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a19() {
+		var province_a19 = document.getElementById("province-a19");
+		province_a19.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a20() {
+		var province_a20 = document.getElementById("province-a20");
+		province_a20.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a21() {
+		var province_a21 = document.getElementById("province-a21");
+		province_a21.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a22() {
+		var province_a22 = document.getElementById("province-a22");
+		province_a22.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a23() {
+		var province_a23 = document.getElementById("province-a23");
+		province_a23.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a24() {
+		var province_a24 = document.getElementById("province-a24");
+		province_a24.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a25() {
+		var province_a25 = document.getElementById("province-a25");
+		province_a25.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a26() {
+		var province_a26 = document.getElementById("province-a26");
+		province_a26.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a27() {
+		var province_a27 = document.getElementById("province-a27");
+		province_a27.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a28() {
+		var province_a28 = document.getElementById("province-a28");
+		province_a28.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a29() {
+		var province_a29 = document.getElementById("province-a29");
+		province_a29.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a30() {
+		var province_a30 = document.getElementById("province-a30");
+		province_a30.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a31() {
+		var province_a31 = document.getElementById("province-a31");
+		province_a31.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a32() {
+		var province_a32 = document.getElementById("province-a32");
+		province_a32.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a33() {
+		var province_a33 = document.getElementById("province-a33");
+		province_a33.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a34() {
+		var province_a34 = document.getElementById("province-a34");
+		province_a34.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a35() {
+		var province_a35 = document.getElementById("province-a35");
+		province_a35.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a36() {
+		var province_a36 = document.getElementById("province-a36");
+		province_a36.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a37() {
+		var province_a37 = document.getElementById("province-a37");
+		province_a37.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a38() {
+		var province_a38 = document.getElementById("province-a38");
+		province_a38.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a39() {
+		var province_a39 = document.getElementById("province-a39");
+		province_a39.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a40() {
+		var province_a40 = document.getElementById("province-a40");
+		province_a40.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a41() {
+		var province_a41 = document.getElementById("province-a41");
+		province_a41.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a42() {
+		var province_a42 = document.getElementById("province-a42");
+		province_a42.classList.toggle("delivery-hidden");
+	}
+
+	
+	function buttonProvince_a43() {
+		var province_a43 = document.getElementById("province-a43");
+		province_a43.classList.toggle("delivery-hidden");
+	}
+
+
+</script>
+	
+<body>
+</body>
+</html>
